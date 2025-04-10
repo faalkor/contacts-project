@@ -61,7 +61,7 @@ app.use(routes);
 
 
 // Configurações de template engine
-app.set('views', './src/views');
+app.set("views", path.join(__dirname, "src", "views"));
 app.set('view engine', 'ejs');
 
 // porta
