@@ -1,0 +1,53 @@
+<%- include('includes/head') %>
+    <%- include('includes/nav') %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-8 my-5">
+                    <h1 class="text-center">Contatos</h1>
+                    <p class="text-center lead">Crie ou Edite contatos</p>
+                    <% if(contato.id) { %>
+                      <form class="form-contact-edit" action="/contato/edit/<%= contato.id %>" method="POST">
+                    <% } else { %> 
+                      <form class="form-contact-register" action="/contato/register" method="POST">
+                    <% } %>
+
+                        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+
+                        <div class="form-group">
+                          <label for="name">Name</label>
+                          <input value="<%= contato.name %>" type="text" class="form-control" name="name" id="name">
+                          <div class="flash-msg-name"></div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="lastName">Last Name</label>
+                          <input value="<%= contato.lastName %>" type="text" class="form-control" name="lastName" id="lastName">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input value="<%= contato.email %>" type="email" class="form-control" name="email" id="email">
+                          <div class="flash-msg-email"></div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="number">Number</label>
+                          <input value="<%= contato.number %>" type="tel" class="form-control" name="number" id="number">
+                        </div>
+                        <div class="flash-msg-email-or-number"></div>
+
+                        <button type="submit" class="btn btn-primary">Save</button>
+                      </form>
+
+                    <%- include('includes/messeges') %>
+
+                </div>
+
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+        <%- include('includes/footer') %>
