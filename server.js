@@ -31,6 +31,7 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 // Session configs
+console.log("dbUrl carregada:", process.env.dbUrl);
 const sessionOptions = session({
     secret: 'teste',
     store: MongoStore.create({ mongoUrl: process.env.dbUrl }), // local salvar sessao
