@@ -55,4 +55,4 @@ npm start
 ```
 
 5. Acesse o projeto pelo navegador:
-[http://localhost:3000]
+http://localhost:3000
