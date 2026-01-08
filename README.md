@@ -10,8 +10,8 @@ Este é um projeto simples de gerenciamento de contatos, com backend em **Expres
 
 ✔ Node.js  
 ✔ Express  
-✔ EJS 
-✔ JavaScript  
+✔ EJS
+✔ JavaScript
 ✔ Webpack  
 ✔ npm  
 ✔ Variáveis de ambiente via `.env`
