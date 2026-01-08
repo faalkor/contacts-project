@@ -55,4 +55,7 @@ npm start
 ```
 
 5. Acesse o projeto pelo navegador:
+
+```bash
 ex: http://localhost:3000
+```
